@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <style>
+        body {
+            height: 100vh;
+        }
+    </style>
+
+    <div id="main" class="flex w-full bg-[#f3f4f6] p-[10px] relative">
+
+        <!-- Side Bar Start -->
+        <div id="sidebar_mock" class="w-[22%] h-[calc(100%-20px)]"></div>
+        <div id="sidebar" class="fixed bg-[#1e293b] w-[22%] h-[calc(100%-20px)] rounded-lg">
+            <div class="px-6 py-2 border-b-2 border-[#324054] text-[#14b8a6]">
+                <div class="flex justify-start items-center w-full h-[80px] gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                        <path fill-rule="evenodd"
+                            d="M5.25 9a6.75 6.75 0 0113.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 01-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 11-7.48 0 24.585 24.585 0 01-4.831-1.244.75.75 0 01-.298-1.205A8.217 8.217 0 005.25 9.75V9zm4.502 8.9a2.25 2.25 0 104.496 0 25.057 25.057 0 01-4.496 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <h1 class="text-[1.8rem] font-medium">
+                        Bell Labs
+                    </h1>
+                </div>
+            </div>
+            <!-- Menu Start -->
+            <div id="side_menu">
+                <div class="flex px-6 py-6 items-center text-[#d4d4d4] gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path
+                            d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                        <path
+                            d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                    </svg>
+                    <p>Dashboard</p>
+                </div>
+                <div class="flex px-6 py-6 items-center text-[#d4d4d4] gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd"
+                            d="M15.75 1.5a6.75 6.75 0 00-6.651 7.906c.067.39-.032.717-.221.906l-6.5 6.499a3 3 0 00-.878 2.121v2.818c0 .414.336.75.75.75H6a.75.75 0 00.75-.75v-1.5h1.5A.75.75 0 009 19.5V18h1.5a.75.75 0 00.53-.22l2.658-2.658c.19-.189.517-.288.906-.22A6.75 6.75 0 1015.75 1.5zm0 3a.75.75 0 000 1.5A2.25 2.25 0 0118 8.25a.75.75 0 001.5 0 3.75 3.75 0 00-3.75-3.75z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <p>Projects</p>
+                </div>
+                <div class="flex px-6 py-6 items-center text-[#d4d4d4] gap-4 bg-[#10b981]">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path
+                            d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                        <path
+                            d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                    </svg>
+                    <p>Tasks</p>
+                </div>
+                <div class="flex px-6 py-6 items-center text-[#d4d4d4] gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path
+                            d="M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 013.75 3.75v1.875C13.5 8.161 14.34 9 15.375 9h1.875A3.75 3.75 0 0121 12.75v3.375C21 17.16 20.16 18 19.125 18h-9.75A1.875 1.875 0 017.5 16.125V3.375z" />
+                        <path
+                            d="M15 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0017.25 7.5h-1.875A.375.375 0 0115 7.125V5.25zM4.875 6H6v10.125A3.375 3.375 0 009.375 19.5H16.5v1.125c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 013 20.625V7.875C3 6.839 3.84 6 4.875 6z" />
+                    </svg>
+
+                    <p>Services</p>
+                </div>
+                <div class="flex px-6 py-6 items-center text-[#d4d4d4] gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd"
+                            d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-3.476.383.39.39 0 00-.297.17l-2.755 4.133a.75.75 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.9 48.9 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <p>Chat</p>
+                </div>
+            </div>
+            <!-- Menu End -->
+
+        </div>
+        <!-- Side Bar End -->
+
+        <div id="main_con" class="w-[78%] h-[calc(100%-5px)] ml-[1rem] bg-[#f3f4f6]">
+            <!-- Top Row Starts  -->
+            <div id="top_row" class="flex justify-between items-center bg-[#fff] mx-[40px] my-6 font-medium">
+                <div class="flex-1">
+                    <input type="text" placeholder="Search..." class="w-full bg-[#f3f4f6] outline-none">
+                </div>
+                <div class="px-6">
+                    <p class="text-[#7f8591]">Friday, 5 June</p>
+                </div>
+                <div class="px-6">
+                    <button class="px-4 py-1 rounded-xl bg-[#000000] text-[#fff]">List View</button>
+                    <button class="px-4 py-1 rounded-xl">Grid View</button>
+                </div>
+            </div>
+            <!-- Top Row Ends  -->
+
+            <div id="latest_tasks" class="mt-[4rem]">
+                <div class="px-4 py-1 bg-black rounded-xl">
+
+                    <!-- latest taks Head start -->
+                    <div class="flex justify-between items-center gap-4">
+                        <div class="flex-1 text-[#fff]">
+                            <p class="text-[2.5rem] font-semibold">Latest Tasks</p>
+                            <p class="text-sm text-[#d9dade]">A list of all the users in your account including their
+                                name,
+                                title, email and role.</p>
+                        </div>
+                        <div>
+                            <button class="px-4 py-2 bg-[#059669] font-medium text-[#fff] rounded-lg">Add more
+                                people</button>
+                        </div>
+                    </div>
+                    <!-- latest taks Head end-->
+
+
+                    <table class="table-auto mt-6 mb-2 bg-[#334155] w-full rounded-t-lg">
+                        <thead>
+                            <tr class="text-[#fff] text-left">
+                                <th class="text-center py-4">
+                                    <input type="checkbox" id="AllCheck" class="outline-none w-4 h-4 bg-[#fff]">
+                                </th>
+                                <th>Name</th>
+                                <th>Title</th>
+                                <th>Role</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-[#fff]">
+                            <tr class="border-b-2 border-[#f2f3f5]">
+                                <td class="text-center py-4"><input checked class="outline-none w-4 h-4 bg-[#fff]"
+                                        type="checkbox">
+                                </td>
+                                <td class="font-medium text-[#53b697]">John Smith</td>
+                                <td class="text-[#828894] font-medium">Back-end Developer</td>
+                                <td class="text-[#828894] font-medium">Member</td>
+                                <td><a href="" class="text-[#53b697] font-medium">Edit</a></td>
+                            </tr>
+                            <tr class="border-b-2 border-[#f2f3f5]">
+                                <td class="text-center py-4"><input class="outline-none w-4 h-4 bg-[#fff]"
+                                        type="checkbox">
+                                </td>
+                                <td class="font-medium">Jane Doe</td>
+                                <td class="text-[#828894] font-medium">Full-stack Developer</td>
+                                <td class="text-[#828894] font-medium">Admin</td>
+                                <td><a href="" class="text-[#53b697] font-medium">Edit</a></td>
+                            </tr>
+                            <tr class="border-b-2 border-[#f2f3f5]">
+                                <td class="text-center py-4"><input checked class="outline-none w-4 h-4 bg-[#fff]"
+                                        type="checkbox">
+                                </td>
+                                <td class="font-medium text-[#53b697]">Bob Johnson</td>
+                                <td class="text-[#828894] font-medium">UI Designer</td>
+                                <td class="text-[#828894] font-medium">Member</td>
+                                <td><a href="" class="text-[#53b697] font-medium">Edit</a></td>
+                            </tr>
+                            <tr class="border-b-2 border-[#f2f3f5]">
+                                <td class="text-center py-4"><input class="outline-none w-4 h-4 bg-[#fff]"
+                                        type="checkbox">
+                                </td>
+                                <td class="font-medium">Sarah Lee</td>
+                                <td class="text-[#828894] font-medium">Front-end Developer</td>
+                                <td class="text-[#828894] font-medium">Admin</td>
+                                <td><a href="" class="text-[#53b697] font-medium">Edit</a></td>
+                            </tr>
+                            <tr class="border-b-2 border-[#f2f3f5]">
+                                <td class="text-center py-4"><input checked class="outline-none w-4 h-4 bg-[#fff]"
+                                        type="checkbox">
+                                </td>
+                                <td class="font-medium text-[#53b697]">Tom Brown</td>
+                                <td class="text-[#828894] font-medium">Back-end Developer</td>
+                                <td class="text-[#828894] font-medium">Member</td>
+                                <td><a href="" class="text-[#53b697] font-medium">Edit</a></td>
+                            </tr>
+                            <tr class="border-b-2 border-[#f2f3f5]">
+                                <td class="text-center py-4"><input class="outline-none w-4 h-4 bg-[#fff]"
+                                        type="checkbox">
+                                </td>
+                                <td class="font-medium">Emily Davis</td>
+                                <td class="text-[#828894] font-medium">Full-end Developer</td>
+                                <td class="text-[#828894] font-medium">Admin</td>
+                                <td><a href="" class="text-[#53b697] font-medium">Edit</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+            <!-- Project Status Start -->
+            <div id="project_status" class="flex justify-evenly gap-4 my-6">
+                <!-- Progress Projects status Start -->
+                <div id="pr_progress" class="bg-[#fff] shadow-xl pr-4 pb-6 rounded-lg">
+                    <div class="p-4">
+                        <p class="text-[1.6rem] font-bold">Projects in progress</p>
+                        <div class="my-4">
+                            <p>
+                                <span class="px-2 py-1 text-sm font-medium bg-[#fecaca] rounded-md">Deployment in
+                                    Progress</span>
+                                <span class="px-2 py-1 text-sm font-medium bg-[#fed7aa] rounded-md">Build failed</span>
+                            </p>
+                        </div>
+                        <p class="text-xl font-medium text-[#626a77]">Improve code quality</p>
+                        <p class="text-sm text-[#626a77] mt-4 mb-2 font-medium">Raised by Manu Arora, 2 hours ago</p>
+                        <div class="flex gap-2 justify-left items-center">
+                            <div class="flex justify-center items-center gap-1 text-[#9ca3af] text-xs">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                    class="w-4 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10 3c-4.31 0-8 3.033-8 7 0 2.024.978 3.825 2.499 5.085a3.478 3.478 0 01-.522 1.756.75.75 0 00.584 1.143 5.976 5.976 0 003.936-1.108c.487.082.99.124 1.503.124 4.31 0 8-3.033 8-7s-3.69-7-8-7zm0 8a1 1 0 100-2 1 1 0 000 2zm-2-1a1 1 0 11-2 0 1 1 0 012 0zm5 1a1 1 0 100-2 1 1 0 000 2z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <button>17 Commnets</button>
+                            </div>
+                            <div class="flex justify-center items-center gap-1 text-[#9ca3af] text-xs">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="w-4 h-4">
+                                    <path fill-rule="evenodd"
+                                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm.53 5.47a.75.75 0 00-1.06 0l-3 3a.75.75 0 101.06 1.06l1.72-1.72v5.69a.75.75 0 001.5 0v-5.69l1.72 1.72a.75.75 0 101.06-1.06l-3-3z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <button>23 files modified</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Progress Projects status End -->
+
+                <!-- Completed Projects status Start -->
+                <div id="pr_completed" class="bg-[#15813d] shadow-xl pr-4 pb-6 rounded-lg">
+                    <div class="p-4">
+                        <p class="text-[1.6rem] font-bold text-[#fff]">Projects Completed</p>
+                        <div class="my-4">
+                            <p>
+                                <span class="px-2 py-1 text-sm font-medium bg-[#bbf7d0] rounded-md">Deployment in
+                                    Progress</span>
+                                <span class="px-2 py-1 text-sm font-medium bg-[#bbf7d0] rounded-md">Build passing</span>
+                            </p>
+                        </div>
+                        <p class="text-xl font-medium text-[#edf6f0]">Deploy hotfix</p>
+                        <p class="text-sm text-[#edf6f0] mt-4 mb-2 font-medium">Raised by Manu Arora, 17 hours ago</p>
+                        <div class="flex gap-2 justify-left items-center">
+                            <div class="flex justify-center items-center gap-1 text-[#edf6f0] text-xs">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                    class="w-4 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10 3c-4.31 0-8 3.033-8 7 0 2.024.978 3.825 2.499 5.085a3.478 3.478 0 01-.522 1.756.75.75 0 00.584 1.143 5.976 5.976 0 003.936-1.108c.487.082.99.124 1.503.124 4.31 0 8-3.033 8-7s-3.69-7-8-7zm0 8a1 1 0 100-2 1 1 0 000 2zm-2-1a1 1 0 11-2 0 1 1 0 012 0zm5 1a1 1 0 100-2 1 1 0 000 2z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <button>12 Commnets</button>
+                            </div>
+                            <div class="flex justify-center items-center gap-1 text-[#edf6f0] text-xs">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="w-4 h-4">
+                                    <path fill-rule="evenodd"
+                                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm.53 5.47a.75.75 0 00-1.06 0l-3 3a.75.75 0 101.06 1.06l1.72-1.72v5.69a.75.75 0 001.5 0v-5.69l1.72 1.72a.75.75 0 101.06-1.06l-3-3z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <button>2 files modified</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Completed Projects status End -->
+            </div>
+            <!-- Project Status End -->
+
+
+            <div class="w-2 h-[20px]"></div>
+        </div>
+    </div>
+
+    <script>
+        var Allcheckbox = document.getElementById("AllCheck");
+        Allcheckbox.indeterminate = true;
+    </script>
+</body>
+
+</html>
